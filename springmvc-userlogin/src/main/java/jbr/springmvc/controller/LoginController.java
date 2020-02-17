@@ -1,5 +1,8 @@
 package jbr.springmvc.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -11,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import jbr.springmvc.model.Login;
+import jbr.springmvc.model.Segment;
 import jbr.springmvc.model.User;
+import jbr.springmvc.service.SegmentService;
 import jbr.springmvc.service.UserService;
 
 @Controller
@@ -19,6 +24,8 @@ public class LoginController {
 
   @Autowired
   UserService userService;
+  @Autowired
+  SegmentService segService;
 
   @RequestMapping(value = "/login", method = RequestMethod.GET)
   public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
@@ -36,11 +43,21 @@ public class LoginController {
     User user = userService.validateUser(login);
 
     if (null != user) {
+      List<Segment> segmenti = segService.getAllSegments();
+      List<Segment> segmentiKmeans = new ArrayList<>();
+      for (Segment segment : segmenti) {
+		if (segment.getTipKlast()==0) {
+			segmentiKmeans.add(segment);
+		}
+      }
       mav = new ModelAndView("welcome");
       mav.addObject("ime", user.getIme());
+      mav.addObject("segmenti", segmentiKmeans);
+      
     } else {
       mav = new ModelAndView("login");
-      mav.addObject("message", "Pogrešan unos username-a ili passworda!");
+      mav.addObject("message", "Pogresan unos username-a ili passworda!");
+      
     }
 
     return mav;

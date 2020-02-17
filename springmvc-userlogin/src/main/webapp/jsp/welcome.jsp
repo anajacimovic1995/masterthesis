@@ -17,7 +17,9 @@
 		</tr>
 		<tr>
 			<td><a href="home.jsp">Home</a></td>
+			<td><a href="/springmvc-user-reg-login/nmf" class="active">NMF klasterizacija</a></td>
 		</tr>
 	</table>
+	${segmenti.get(0).getAuthorGeneres()}
 </body>
 </html>
