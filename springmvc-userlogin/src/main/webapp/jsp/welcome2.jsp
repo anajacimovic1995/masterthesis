@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<title>NMF klasteri</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Glavna forma</title>
 	<style>
 	table {
 	  font-family: arial, sans-serif;
@@ -31,7 +31,7 @@
 		</tr>
 		<tr>
 			<td><a href="home.jsp">Home</a></td>
-			<td><a href="/springmvc-user-reg-login/welcome" class="active">Kmeans klasterizacija</a></td>
+			<td><a href="/springmvc-user-reg-login/nmf" class="active">NMF klasterizacija</a></td>
 		</tr>
 	</table>
 	<div id="piechart"></div>
@@ -59,7 +59,7 @@
 	  chart.draw(data, options);
 	}
 	</script>
-		<h2>Parametri segmenata</h2>
+	<h2>Parametri segmenata</h2>
 
 	<table>
 	  <tr>

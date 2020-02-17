@@ -40,7 +40,7 @@ public class NMFController {
 	  @RequestMapping(value = "/welcome", method = RequestMethod.GET)
 	  public ModelAndView vratiWelcome(HttpServletRequest request) {
 		  
-		ModelAndView mav = new ModelAndView("welcome");
+		ModelAndView mav = new ModelAndView("welcome2");
 		List<Segment> segmenti = segService.getAllSegments();
 	      List<Segment> segmentiKmeans = new ArrayList<>();
 	      for (Segment segment : segmenti) {
