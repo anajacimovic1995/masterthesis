@@ -35,6 +35,7 @@
 		<tr>
 			<td><a href="home.jsp">Home</a></td>
 			<td><a href="/springmvc-user-reg-login/nmf" class="active">NMF klasterizacija</a></td>
+			<td><a href="/springmvc-user-reg-login/noviCitalac" class="active">Pokreni za novog korisnika</a></td>
 		</tr>
 	</table>
 	<div id="piechart"></div>
@@ -102,6 +103,19 @@
 	    <th>${segmenti.get(2).getCount()}</th>
 	  </tr>
 	</table>
-	
+	<p>
+	Diferenciraju se tri segmenta dobijena kmeans klasterizacijom.	
+	<p>
+	Prvi segment cine ${segmenti.get(0).getNazivSeg()}. Ovaj segment cine citaoci koji su slabje aktivni kada se radi o ocenjivanju
+	knjiga koje citaju. Autori koje citaju imaju najmanje recenzija u poredjenju sa druga dva segmenta. Prosecne ocene autora su, pak,
+	priblizne kao u kod segmenta ${segmenti.get(1).getNazivSeg()}. Ocenjivanje najcitanijeg zanra kod prvog i drugog segmenta je isto.
+	<p>
+	Drugi segment cine ${segmenti.get(1).getNazivSeg()}. Ovaj segment cine ljudi koji su najaktivniji kada se radi o ocenjivanju, i daju najvise ocena
+	knjigama koje su procitali. Takodje, autore koje citaju su najvise puta ocenjeni.
+	<p>
+	Treci segment cine ${segmenti.get(2).getNazivSeg()}. Poslednji segment cine citaoci koji su za nijansu aktivniji od prvog segmenta.
+	Broj ocena koje ostavljaju na knjige koje su procitali je malo visi, a razlika je da citaju autore sa vecim brojem recenzija od prvog segmenta.
+	Razlika ovog segmenta od prethodna dva je slabije ocenjivanje najcitanije zanra citanja, kao i citanje autora sa za nijansu slabijom ocenom 
+	od prva dva segmenta.
 </body>
 </html>

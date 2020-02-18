@@ -62,5 +62,23 @@ public class LoginController {
 
     return mav;
   }
+  @RequestMapping(value = "/noviCitalac", method = RequestMethod.GET)
+  public ModelAndView predvidjanje(HttpServletRequest request) {
+	  
+	ModelAndView mav = new ModelAndView("welcome2");
+	List<Segment> segmenti = segService.getAllSegments();
+      List<Segment> segmentiKmeans = new ArrayList<>();
+      for (Segment segment : segmenti) {
+		if (segment.getTipKlast()==0) {
+			
+			segmentiKmeans.add(segment);
+	   
+		}
+      }
+      mav.addObject("segmenti", segmentiKmeans);
+      
+      Segment novi = new Segment(0, 0, null, 0, 12, 12, 1, 23000, 2000, 0, 12, -1, 0);
+      return mav;
+  }
 
 }

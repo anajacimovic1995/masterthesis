@@ -99,6 +99,11 @@
 	    <th>${segmenti.get(2).getCount()}</th>
 	  </tr>
 	</table>
-	
+	<p>
+	Opis klastera NMF klasterizacije
+	<p>
+	Razlike izmedju klastera su jako male, najmanje izmedju prvog i treceg klastera. Zapazeno je da su kod drugog 
+	klastera broj i stepen ocenjivanja manji nego kod druga dva klastera. Takodje, primetno je da je i stepen 
+	ocenjivanja najcitanijeg zanra manji nego kod ostalih.
 </body>
 </html>
