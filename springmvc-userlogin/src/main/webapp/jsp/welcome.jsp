@@ -57,7 +57,7 @@
 		]);
 		
 		  // Optional; add a title and set the width and height of the chart
-		  var options = {'title':'', 'width':550, 'height':400};
+		  var options = {'title':'', 'width':550, 'height':300};
 		
 		  // Display the chart inside the <div> element with id="piechart"
 		  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -117,7 +117,7 @@
 		</div>
 	<hr>
 		<div class="w3-center">
-	    <h2>Opis segmenata</h2>
+	    <h2>Opis segmenata k-means klasterizacije</h2>
 	    <p w3-class="w3-large">Diferenciraju se tri segmenta dobijena kmeans klasterizacijom.</p>
 	  </div>
 	<button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">${segmenti.get(0).getNazivSeg()}</button>
