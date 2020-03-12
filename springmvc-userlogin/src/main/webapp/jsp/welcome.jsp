@@ -16,7 +16,6 @@
 	
 
 	<header class="w3-container w3-theme w3-padding" id="myHeader">
-	  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
 	  <div class="w3-center">
 	  <h4>Sajt za pregled ponasanja citalaca knjiga</h4>
 	  <h1 class="w3-xxxlarge w3-animate-bottom">Dobrodosao korisnice ${ime}</h1>
@@ -30,15 +29,19 @@
 	      <header class="w3-container w3-theme-l1"> 
 	        <span onclick="document.getElementById('id01').style.display='none'"
 	        class="w3-button w3-display-topright">×</span>
-	        <h4>Oh snap! We just showed you a modal..</h4>
-	        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+	        <h4>Tipovi klasterizacija</h4>
+	        
 	      </header>
 	      <div class="w3-padding">
-	        <p>Cool huh? Ok, enough teasing around..</p>
-	        <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+	      	<p>K-means klasterizacija</p>
+	        <p>U analizi podataka, klasterizacija metodom k-srednjih vrednosti metod je za analizu grupisanja ciji je cilj 
+	        particionisanje n opservacija u k klastera u kojem svaka opservacija pripada klasteru sa najslicnijim znacenjem.</p>
+	        <p>NMF klasterizacija</p>
+	 		<p>Non-negative matrix factorization (NMF or NNMF), spada u grupu algoritama mulivarijacione analize i linearne algebre. Matrica V je faktorisana u (obicno) 
+	 		dve matrice W i H. Sve tri matrice imaju nenegativne elemente. </p>
 	      </div>
 	      <footer class="w3-container w3-theme-l1">
-	        <p>Modal footer</p>
+	        
 	      </footer>
 	    </div>
 	</div>
@@ -46,9 +49,7 @@
 	<hr>	
 	<div class="w3-bar w3-theme">
 	  
-	  <a href="/springmvc-user-reg-login/nmf" class="w3-bar-item w3-button w3-padding-16">NMF</a>	  
-	  <a href="/springmvc-user-reg-login/noviCitalac" class="w3-bar-item w3-button w3-padding-16">Pokreni za novog korisnika</a>
-
+	  <a href="/springmvc-user-reg-login/nmf" class="w3-bar-item w3-button w3-padding-16">NMF</a>
 	  <a href="home.jsp" class="w3-bar-item w3-button w3-padding-16">Logout</a>
 	</div>
 	</div>
